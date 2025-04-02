@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start" : "nodemon server.js"
+    "start": "nodemon server.js",
+    "client": "npm run start --prefix client",
+    "dev" : "concurrently \"npm run server\" \"npm run client\""
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,9 @@
   "homepage": "https://github.com/tharakasaranga/Mern_CRUD#readme",
   "description": "",
   "dependencies": {
+    "axios": "^1.8.4",
     "body-parser": "^2.2.0",
+    "concurrently": "^9.1.2",
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "mongoose": "^8.13.1",
