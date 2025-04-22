@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 
 const CreatePost = () => {
@@ -78,6 +78,7 @@ const CreatePost = () => {
             <button type="submit" className="btn btn-primary">
               Add Post
             </button>
+            <Link to="/" className="btn btn-secondary ms-2">Back to Posts</Link>
           </div>
         </form>
       </div>

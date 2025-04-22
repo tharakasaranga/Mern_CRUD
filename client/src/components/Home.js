@@ -5,13 +5,10 @@ import { Link } from 'react-router-dom';
 const Home = () => {
   const [posts, setPosts] = useState([]);
 
-  useEffect(() => {
-    retrievePosts();
-  }, []);
+  useEffect(() => {retrievePosts();}, []);
 
   const retrievePosts = () => {
-    axios
-      .get('http://localhost:5000/posts')
+    axios.get('http://localhost:5000/posts')
       .then((res) => {
         if (res.data.success) {
           setPosts(res.data.existingPosts);
