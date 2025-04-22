@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { useParams, Link } from 'react-router-dom'; // Import Link
+import { useParams, Link } from 'react-router-dom'; 
 
 
 const PostDetails = () => {
